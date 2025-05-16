@@ -10,6 +10,7 @@ header {
   grid-area: header;
   background-color: var(--color-primary);
   color: var(--text-color);
+  text-align: center;
 }
 
 nav {
@@ -35,6 +36,7 @@ footer {
   grid-area: footer;
   background-color: var(--color-primary-alt);
   color: var(--color-on-secondary);
+  text-align: center;
 }
 
 .fullscreen-map,
