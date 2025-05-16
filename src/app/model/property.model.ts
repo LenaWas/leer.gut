@@ -3,11 +3,11 @@ import { UUID } from './uuid.model';
 // --- properties ---
 export interface Property {
   id: UUID;
-  title?: string | null;
+  title: string;
   description?: string | null;
   landlord_user_id: UUID;
-  longitude?: number | null;
-  latitude?: number | null;
+  longitude: number;
+  latitude: number;
   date_available_from?: string | null; // ISO date string
   date_available_to?: string | null;   // ISO date string
   sqm_size?: number | null;

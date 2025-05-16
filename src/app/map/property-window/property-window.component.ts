@@ -14,7 +14,9 @@ export class PropertyWindowComponent {
 
   ngOnInit() {
     if (this.property.image) {
-      this.imageUrl = URL.createObjectURL(this.property.image);
+      // Fix: Convert Uint8Array or ArrayBuffer to Blob before using URL.createObjectURL
+      const blob = new Blob([this.property.image as ArrayBuffer], { type: 'image/png' });
+      this.imageUrl = URL.createObjectURL(blob);
     }
   }
 
