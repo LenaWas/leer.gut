@@ -1,11 +1,11 @@
-<form>
+<form (submit)="onLogin($event)">
   <label class="input">
     E-Mail-Adresse
-    <input type="email" />
+    <input type="email" name="email" required />
   </label>
   <label class="input">
     Passwort
-    <input type="password" />
+    <input type="password" name="password" required />
   </label>
   <button type="submit" class="button cta">Anmelden</button>
 </form>

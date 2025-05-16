@@ -1,32 +1,42 @@
 :host {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: "header" "main" "nav" "footer";
+  grid-template-rows: min-content 1fr max-content min-content;
   width: 100vw;
   height: 100vh;
 }
 
 header {
-  height: max-content;
-  background-color: var(--color-accent);
-  color: var(--text-color-on-accent);
+  grid-area: header;
+  background-color: var(--color-primary);
+  color: var(--text-color);
+  text-align: center;
+}
 
-  & nav {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-1x);
-  }
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacing-2x);
+  padding: var(--spacing-1x);
+  background-color: var(--color-primary-alt);
+  color: var(--text-color-accent);
 }
 
 main {
-  flex: 1;
+  grid-area: main;
   background-color: var(--color-primary);
   color: var(--text-color);
+  padding: var(--spacing-2x);
 }
 
 footer {
-  height: max-content;
-  background-color: var(--color-secondary);
+  grid-area: footer;
+  background-color: var(--color-primary-alt);
   color: var(--color-on-secondary);
+  text-align: center;
 }
 
 .fullscreen-map,
