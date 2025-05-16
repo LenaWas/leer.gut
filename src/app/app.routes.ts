@@ -3,6 +3,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { MapComponent } from './map/map.component';
 import { RegisterComponent } from './register/register.component';
+import { MailboxComponent } from './mailbox/mailbox.component';
 
 export const routes: Routes = [
   {
@@ -24,6 +25,11 @@ export const routes: Routes = [
     path: 'map',
     title: 'Karte',
     component: MapComponent,
+  },
+  {
+    path: 'mailbox',
+    title: 'Your messages',
+    component: MailboxComponent
   },
   {
     path: '**',

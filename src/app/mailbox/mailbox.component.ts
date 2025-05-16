@@ -1,19 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { Email, EmailService } from '../services/email.service';
+import { CommonModule, AsyncPipe, DatePipe } from '@angular/common';
+import { EmailService, Email } from '../services/email.service';
+import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-email-overview',
-  templateUrl: './email-overview.component.html',
-  styleUrls: ['./email-overview.component.scss']
+  selector: 'app-mailbox',
+  standalone: true,
+  imports: [CommonModule, AsyncPipe, DatePipe],
+  templateUrl: './mailbox.component.html',
+  styleUrls: ['./mailbox.component.css']
 })
-export class EmailOverviewComponent implements OnInit {
-  emails: Email[] = [];
+export class MailboxComponent implements OnInit {
+  emails$!: Observable<Email[]>;
+  selectedEmail: Email | null = null;
 
   constructor(private emailService: EmailService) {}
 
   ngOnInit(): void {
-    this.emailService.getEmails().subscribe((data) => {
-      this.emails = data;
-    });
+    this.emails$ = this.emailService.getEmails();
+  }
+
+  selectEmail(email: Email) {
+    this.selectedEmail = email;
+    email.isRead = true;
   }
 }

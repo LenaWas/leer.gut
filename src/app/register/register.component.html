@@ -1,15 +1,15 @@
-<form>
+<form (submit)="onRegister($event)">
   <label class="input">
     E-Mail-Adresse
-    <input type="email" />
+    <input type="email" name="email" required />
   </label>
   <label class="input">
     Passwort
-    <input type="password" />
+    <input type="password" name="password" required />
   </label>
   <label class="input">
     Passwort wiederholen
-    <input type="password" />
+    <input type="password" name="passwordRepeat" required />
   </label>
-  <button type="submit" class="button cta">Regsitrieren</button>
+  <button type="submit" class="button cta">Registrieren</button>
 </form>

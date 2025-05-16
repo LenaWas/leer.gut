@@ -10,24 +10,22 @@ export interface Email {
   isRead: boolean;
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class EmailService {
   private emails: Email[] = [
     {
       id: '1',
-      sender: 'alice@example.com',
-      subject: 'Mietvertrag unterschrieben',
-      preview: 'Hallo, anbei der unterschriebene Vertrag...',
+      sender: 'max@example.com',
+      subject: 'Willkommen!',
+      preview: 'Hallo, willkommen bei unserem Service.',
       sentAt: new Date(),
       isRead: false
     },
     {
       id: '2',
-      sender: 'bob@example.com',
-      subject: 'Frage zur Immobilie',
-      preview: 'Ist die Wohnung noch verfügbar?',
+      sender: 'sophie@example.com',
+      subject: 'Mietvertrag eingegangen',
+      preview: 'Anbei finden Sie den unterschriebenen Vertrag...',
       sentAt: new Date(Date.now() - 86400000),
       isRead: true
     }
