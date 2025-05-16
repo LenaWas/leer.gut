@@ -4,12 +4,13 @@ import { LoginComponent } from './login/login.component';
 import { MapComponent } from './map/map.component';
 import { RegisterComponent } from './register/register.component';
 import { MailboxComponent } from './mailbox/mailbox.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
   {
     path: '',
     title: 'Startseite',
-    component: LoginComponent,
+    component: DashboardComponent,
   },
   {
     path: 'register',

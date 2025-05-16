@@ -1,12 +1,10 @@
 .default-theme {
-  --color-accent: #38944b;
-  --color-primary: #ededed;
-  --color-secondary: #e6a220;
-  --color-tertiary: #4a4a4a;
+  --color-accent: #54b16a;
+  --color-primary: #121419;
+  --color-primary-alt: #292b2f;
 
   --text-color-accent: var(--color-accent);
-  --text-color-on-accent: var(--color-primary);
-  --text-color: var(--color-tertiary);
+  --text-color: #fff;
 
   --input-background: #e4e4e4;
   --input-color: #8c8c8c;

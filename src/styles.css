@@ -24,6 +24,7 @@
 
 .button {
   padding: var(--spacing-1x);
+  border-radius: 999px;
   cursor: pointer;
 
   &.cta {
@@ -56,9 +57,10 @@
   padding: var(--spacing-05x);
   background-color: var(--input-background);
   color: var(--input-color);
+  border-radius: var(--spacing-05x);
 
   &:focus-visible,
   &:has(:focus-visible) {
-    outline: 3px var(--color-secondary) solid;
+    outline: 3px var(--color-accent) solid;
   }
 }
