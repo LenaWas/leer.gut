@@ -1,0 +1,33 @@
+<div class="email-container">
+    <h2>📬 E-Mail Übersicht</h2>
+  
+    <mat-table [dataSource]="emails" class="mat-elevation-z2">
+  
+      <ng-container matColumnDef="sender">
+        <mat-header-cell *matHeaderCellDef> Absender </mat-header-cell>
+        <mat-cell *matCellDef="let email"> {{email.sender}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="subject">
+        <mat-header-cell *matHeaderCellDef> Betreff </mat-header-cell>
+        <mat-cell *matCellDef="let email"> 
+          <strong *ngIf="!email.isRead">{{email.subject}}</strong>
+          <span *ngIf="email.isRead">{{email.subject}}</span>
+        </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="preview">
+        <mat-header-cell *matHeaderCellDef> Vorschau </mat-header-cell>
+        <mat-cell *matCellDef="let email"> {{email.preview}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="sentAt">
+        <mat-header-cell *matHeaderCellDef> Datum </mat-header-cell>
+        <mat-cell *matCellDef="let email"> {{email.sentAt | date:'short'}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="['sender', 'subject', 'preview', 'sentAt']"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: ['sender', 'subject', 'preview', 'sentAt'];"></mat-row>
+    </mat-table>
+  </div>
+  
