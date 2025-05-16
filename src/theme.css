@@ -1,6 +1,24 @@
 .default-theme {
-    --color-primary: green;
-    --color-primary-faded: color-mix(in srgb, var(--color-primary), transparent);
-    --color-secondary: color-mix(in srgb, green, transparent);
-    --color-secondary-faded: color-mix(in srgb, green, transparent);
+  --color-accent: #38944b;
+  --color-primary: #ededed;
+  --color-secondary: #e6a220;
+  --color-tertiary: #4a4a4a;
+
+  --text-color-accent: var(--color-accent);
+  --text-color-on-accent: var(--color-primary);
+  --text-color: var(--color-tertiary);
+
+  --input-background: #e4e4e4;
+  --input-color: #8c8c8c;
+
+  --border-color: #b7b7b7;
+
+  --color-positive: lime;
+  --color-on-positive: black;
+  --color-information: blue;
+  --color-on-information: white;
+  --color-critical: orange;
+  --color-on-critical: black;
+  --color-negative: red;
+  --color-on-negative: white;
 }

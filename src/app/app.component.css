@@ -7,15 +7,26 @@
 
 header {
   height: max-content;
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
+  color: var(--text-color-on-accent);
+
+  & nav {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-1x);
+  }
 }
 
 main {
   flex: 1;
+  background-color: var(--color-primary);
+  color: var(--text-color);
 }
 
 footer {
   height: max-content;
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
 }
 
 .fullscreen-map,

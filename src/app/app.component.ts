@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-// Import the MapComponent from the test folder
+import { Component, HostBinding } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,5 +9,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Immobilienverwaltung';
+  @HostBinding('class') theme: string = 'default-theme';
 }

@@ -2,11 +2,22 @@ import { Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { MapComponent } from './map/map.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   {
     path: '',
     title: 'Startseite',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    title: 'Registrierung',
+    component: RegisterComponent,
+  },
+  {
+    path: 'login',
+    title: 'LogIn',
     component: LoginComponent,
   },
   {
