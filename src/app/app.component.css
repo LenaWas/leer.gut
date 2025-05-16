@@ -1,25 +1,25 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 
 header {
-    height: max-content;
-    background-color: green;
-    
+  height: max-content;
+  background-color: var(--color-primary);
 }
 
 main {
-    flex: 1;
+  flex: 1;
 }
 
 footer {
-    height: max-content;
+  height: max-content;
 }
 
-.fullscreen-map, app-map {
+.fullscreen-map,
+app-map {
   position: fixed;
   top: 0;
   left: 0;

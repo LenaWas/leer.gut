@@ -1,0 +1,45 @@
+<div class="info-window">
+  @if(imageUrl) {
+  <img [src]="imageUrl" alt="Bild zur Immobilie" class="property-image" />
+  }
+  <h2>{{ property.title }}</h2>
+  <p>{{ property.description }}</p>
+  <table>
+    <tr>
+      <td>Fläche:</td>
+      <td>{{ property.sqm_size }} m²</td>
+    </tr>
+    <tr>
+      <td>Miete:</td>
+      <td>{{ property.rental_cost }} {{ property.rental_cost_currency }}</td>
+    </tr>
+    <tr>
+      <td>Nebenkosten:</td>
+      <td>
+        {{ property.rental_cost_incidental }}
+        {{ property.rental_cost_incidental_currency }}
+      </td>
+    </tr>
+    <tr>
+      <td>Kaution:</td>
+      <td>
+        {{ property.rental_deposit }} {{ property.rental_deposit_currency }}
+      </td>
+    </tr>
+    <tr>
+      <td>Verfügbar:</td>
+      <td>
+        {{ property.date_available_from }} bis {{ property.date_available_to }}
+      </td>
+    </tr>
+    <tr>
+      <td>Schlüssel:</td>
+      <td>{{ property.keys_description }}</td>
+    </tr>
+    <tr>
+      <td>Inventar:</td>
+      <td>{{ property.inventory_description }}</td>
+    </tr>
+  </table>
+  <button class="rent-btn" (click)="onRentClick()">Anmieten</button>
+</div>

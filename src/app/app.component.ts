@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 // Import the MapComponent from the test folder
-import { MapComponent } from './test/map.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MapComponent],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent { 
+export class AppComponent {
   title = 'Immobilienverwaltung';
 }
