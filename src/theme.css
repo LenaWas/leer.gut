@@ -1,0 +1,6 @@
+.default-theme {
+    --color-primary: green;
+    --color-primary-faded: color-mix(in srgb, var(--color-primary), transparent);
+    --color-secondary: color-mix(in srgb, green, transparent);
+    --color-secondary-faded: color-mix(in srgb, green, transparent);
+}
