@@ -27,9 +27,14 @@ export class MapComponent implements AfterViewInit {
     const imageBlob1 = await fetch('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80').then(r => r.blob());
     const imageBlob2 = await fetch('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80').then(r => r.blob());
 
+    async function blobToUint8Array(blob: Blob): Promise<Uint8Array> {
+      const arrayBuffer = await blob.arrayBuffer();
+      return new Uint8Array(arrayBuffer);
+    }
+
     const properties: Property[] = [
       {
-        id: 1,
+        id: '1',
         title: 'Zentrum Saarbrücken',
         description: 'Schöne Wohnung im Zentrum von Saarbrücken.',
         landlord_user_id: '123e4567-e89b-12d3-a456-426614174000',
@@ -47,10 +52,10 @@ export class MapComponent implements AfterViewInit {
         lease_day_of_month: 1,
         keys_description: '2 Haustürschlüssel, 1 Briefkastenschlüssel',
         inventory_description: 'Küche, Waschmaschine, Schrank',
-        image: imageBlob1
+        image: await blobToUint8Array(imageBlob1)
       },
       {
-        id: 2,
+        id: '2',
         title: 'Universität Saarbrücken',
         description: 'Modernes Apartment nahe der Universität.',
         landlord_user_id: '123e4567-e89b-12d3-a456-426614174001',
@@ -68,7 +73,7 @@ export class MapComponent implements AfterViewInit {
         lease_day_of_month: 1,
         keys_description: '1 Haustürschlüssel, 1 Briefkastenschlüssel',
         inventory_description: 'Bett, Schreibtisch, Stuhl',
-        image: imageBlob2
+        image: await blobToUint8Array(imageBlob2)
       }
     ];
 
