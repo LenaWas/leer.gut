@@ -29,6 +29,7 @@ body {
 }
 
 .button {
+  text-align: center;
   padding: var(--spacing-1x);
   border-radius: var(--spacing-05x);
   cursor: pointer;
@@ -82,4 +83,17 @@ a {
 
 button {
   background-color: inherit;
+}
+
+/*google killer*/
+.gm-style-iw.gm-style-iw-c {
+  background-color: var(--color-primary-alt);
+
+  & .gm-ui-hover-effect span {
+    filter: grayscale(1) invert(1);
+  }
+}
+
+.gm-style-iw-tc::after {
+  background-color: var(--color-primary-alt) !important;
 }

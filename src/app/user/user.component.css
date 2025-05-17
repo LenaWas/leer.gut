@@ -36,15 +36,12 @@ hgroup {
   }
 
   & p {
-    color: var(--color-primary-alt);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-05x);
     font-size: var(--font-size-s);
 
     & span {
-      color: var(--text-color);
-
       & img {
         object-fit: contain;
         width: var(--font-size-m);
