@@ -64,5 +64,6 @@ nav {
   grid-area: links;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  text-align: right;
 }

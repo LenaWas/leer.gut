@@ -45,9 +45,10 @@ hgroup {
     & span {
       color: var(--text-color);
 
-      &::before {
-        content: "! ";
-        color: var(--text-color-accent);
+      & img {
+        object-fit: contain;
+        width: var(--font-size-m);
+        aspect-ratio: 1/1;
       }
     }
   }
@@ -61,10 +62,15 @@ nav {
 
   & a {
     font-size: var(--font-size-l);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-05x);
 
-    & span {
-      font-size: inherit;
-      color: var(--text-color-accent);
+    & img {
+      object-fit: contain;
+      width: var(--font-size-l);
+      aspect-ratio: 1/1;
     }
   }
 }
