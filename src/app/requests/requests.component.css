@@ -35,6 +35,9 @@ article {
 
   & ul {
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     & li {
       font-size: var(--font-size-s);
 
@@ -42,6 +45,10 @@ article {
         color: var(--text-color-accent);
         font-size: inherit;
       }
+    }
+
+    & li:nth-child(2n) {
+      text-align: right;
     }
   }
 
