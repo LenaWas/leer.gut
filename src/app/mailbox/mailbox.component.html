@@ -1,31 +1,19 @@
-<div class="mailbox-container">
-    <div class="sidebar">
-      <div class="email-list" *ngIf="emails$ | async as emails">
-        <div
-          *ngFor="let email of emails"
-          class="email-item"
-          [class.selected]="selectedEmail?.id === email.id"
-          [class.unread]="!email.isRead"
-          (click)="selectEmail(email)"
-        >
-          <div class="sender">{{ email.sender }}</div>
-          <div class="subject">{{ email.subject }}</div>
-          <div class="preview">{{ email.preview }}</div>
-          <div class="date">{{ email.sentAt | date: 'short' }}</div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="content-pane" *ngIf="selectedEmail">
-      <h2>{{ selectedEmail.subject }}</h2>
-      <p><strong>Von:</strong> {{ selectedEmail.sender }}</p>
-      <p><strong>Gesendet am:</strong> {{ selectedEmail.sentAt | date: 'fullDate' }}</p>
-      <hr />
-      <p>{{ selectedEmail.preview }} (hier wäre die vollständige Nachricht)</p>
-    </div>
-  
-    <div class="content-pane empty" *ngIf="!selectedEmail">
-      <p>📬 Bitte wähle eine E-Mail aus.</p>
-    </div>
-  </div>
-  
+<hgroup>
+  <h1>Postfach</h1>
+  <p>17</p>
+</hgroup>
+@for (email of emails$ | async ; track $index) {
+<details>
+  <summary>{{ email.subject }}</summary>
+  <section>
+    <form>
+      <textarea placeholder="Hier antworten ..."></textarea>
+      <button type="button" class="button positive">Senden</button>
+    </form>
+    <article>
+      <h2>{{ email.sentAt | date : "short" }} - <span>{{ email.sender }}</span></h2>
+      <p>{{ email.preview }}</p>
+    </article>
+  </section>
+</details>
+}

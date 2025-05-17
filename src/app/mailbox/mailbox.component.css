@@ -1,65 +1,54 @@
-.mailbox-container {
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1x);
+
+  & > hgroup {
     display: flex;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-  }
-  
-  .sidebar {
-    width: 30%;
-    border-right: 1px solid #ccc;
-    overflow-y: auto;
-    background: #f9f9f9;
-  }
-  
-  .email-list {
-    padding: 0.5rem;
-  }
-  
-  .email-item {
-    padding: 0.75rem;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-  
-    &.selected {
-      background-color: #e0e7ff;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & h1,
+    & p {
+      font-size: var(--font-size-l);
     }
-  
-    &.unread .subject {
-      font-weight: bold;
-    }
-  
-    .sender {
-      font-size: 0.9rem;
-      color: #333;
-    }
-  
-    .subject {
-      font-size: 1rem;
-      margin-top: 0.2rem;
-    }
-  
-    .preview {
-      font-size: 0.8rem;
-      color: #666;
-    }
-  
-    .date {
-      font-size: 0.7rem;
-      color: #999;
-      text-align: right;
+
+    & p {
+      color: var(--text-color-accent);
     }
   }
-  
-  .content-pane {
-    flex: 1;
-    padding: 1.5rem;
-    overflow-y: auto;
-  
-    &.empty {
+}
+
+details {
+  & summary {
+    color: var(--text-color-accent);
+    background-color: var(--color-primary-alt);
+    border-radius: var(--spacing-1x);
+    padding: var(--spacing-1x);
+  }
+
+  & section {
+    background-color: var(--color-primary-alt);
+    border-radius: var(--spacing-1x);
+    padding: var(--spacing-1x);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1x);
+
+    & form {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #888;
+      flex-direction: column;
+      gap: var(--spacing-05x);
+    }
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-05x);
+
+      & span {
+        color: var(--text-color-accent);
+      }
     }
   }
-  
+}

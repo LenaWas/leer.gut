@@ -9,8 +9,21 @@
 header {
   grid-area: header;
   background-color: var(--color-primary);
-  color: var(--text-color);
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: var(--spacing-1x);
+
+  & img {
+    background-color: var(--color-primary-alt);
+    width: 10vw;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+  }
+
+  & button {
+    color: var(--text-color);
+  }
 }
 
 nav {
@@ -23,6 +36,19 @@ nav {
   padding: var(--spacing-1x);
   background-color: var(--color-primary-alt);
   color: var(--text-color-accent);
+
+  & a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-025x);
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      font-size: var(--font-size-s);
+      color: var(--text-color);
+    }
+  }
 }
 
 main {
@@ -30,6 +56,9 @@ main {
   background-color: var(--color-primary);
   color: var(--text-color);
   padding: var(--spacing-2x);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 footer {

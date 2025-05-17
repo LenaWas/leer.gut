@@ -6,12 +6,10 @@
   --text-color-accent: var(--color-accent);
   --text-color: #fff;
 
-  --input-background: #e4e4e4;
-  --input-color: #8c8c8c;
-
   --border-color: #b7b7b7;
+  --border-color-accent: var(--color-accent);
 
-  --color-positive: lime;
+  --color-positive: var(--color-accent);
   --color-on-positive: black;
   --color-information: blue;
   --color-on-information: white;

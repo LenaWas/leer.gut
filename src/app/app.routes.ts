@@ -5,6 +5,7 @@ import { MapComponent } from './map/map.component';
 import { RegisterComponent } from './register/register.component';
 import { MailboxComponent } from './mailbox/mailbox.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RequestsComponent } from './requests/requests.component';
 
 export const routes: Routes = [
   {
@@ -29,8 +30,13 @@ export const routes: Routes = [
   },
   {
     path: 'mailbox',
-    title: 'Your messages',
-    component: MailboxComponent
+    title: 'Postfach',
+    component: MailboxComponent,
+  },
+  {
+    path: 'requests',
+    title: 'Anfragen',
+    component: RequestsComponent,
   },
   {
     path: '**',
