@@ -1,0 +1,70 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1x);
+
+  & ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1x);
+  }
+}
+
+ol {
+  list-style: none;
+}
+
+a {
+  background-color: var(--color-primary-alt);
+  display: grid;
+  grid-template-areas: "image header fav" "image list list" "image details options";
+  grid-template-columns: 33% 1fr max-content;
+  gap: 0 var(--spacing-1x);
+  border-radius: var(--spacing-1x);
+  overflow: hidden;
+
+  & > *:not(img) {
+    padding: var(--spacing-05x) 0;
+  }
+
+  & hgroup p,
+  & ol {
+    font-size: var(--font-size-s);
+  }
+
+  & img {
+    grid-area: image;
+    background-color: var(--color-accent);
+    width: 100%;
+    height: 100%;
+    border-radius: var(--spacing-1x);
+  }
+
+  & ol {
+    grid-area: list;
+    gap: var(--spacing-05x);
+
+    &::before {
+      content: "Communityvorschläge";
+      color: var(--text-color-accent);
+    }
+  }
+
+  & p {
+    grid-area: details;
+
+    & span {
+      font-size: var(--font-size-l);
+    }
+  }
+
+  & button {
+    padding: var(--spacing-1x);
+    &:first-of-type {
+      grid-area: fav;
+    }
+    &:last-of-type {
+      grid-area: options;
+    }
+  }
+}

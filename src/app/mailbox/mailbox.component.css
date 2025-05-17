@@ -20,6 +20,16 @@
 }
 
 details {
+  &:open {
+    & summary {
+      border-radius: var(--spacing-1x) var(--spacing-1x) 0 0;
+    }
+
+    & section {
+      border-radius: 0 0 var(--spacing-1x) var(--spacing-1x);
+    }
+  }
+
   & summary {
     color: var(--text-color-accent);
     background-color: var(--color-primary-alt);

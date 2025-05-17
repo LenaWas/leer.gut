@@ -6,6 +6,10 @@ import { RegisterComponent } from './register/register.component';
 import { MailboxComponent } from './mailbox/mailbox.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RequestsComponent } from './requests/requests.component';
+import { ContractsComponent } from './contracts/contracts.component';
+import { SearchComponent } from './search/search.component';
+import { PropertyComponent } from './search/property/property.component';
+import { UserComponent } from './user/user.component';
 
 export const routes: Routes = [
   {
@@ -37,6 +41,26 @@ export const routes: Routes = [
     path: 'requests',
     title: 'Anfragen',
     component: RequestsComponent,
+  },
+  {
+    path: 'search',
+    title: 'Suche',
+    component: SearchComponent,
+  },
+  {
+    path: 'contracts',
+    title: 'Veträge',
+    component: ContractsComponent,
+  },
+  {
+    path: 'property',
+    title: 'Immobilie xyz',
+    component: PropertyComponent,
+  },
+  {
+    path: 'user',
+    title: 'Dein Konto',
+    component: UserComponent,
   },
   {
     path: '**',

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { SupabaseAuthService } from '../services/supabase-auth.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
+  imports: [RouterLink],
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
@@ -12,8 +14,11 @@ export class LoginComponent {
   async onLogin(event: Event) {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
-    const email = (form.querySelector('[name="email"]') as HTMLInputElement).value;
-    const password = (form.querySelector('[name="password"]') as HTMLInputElement).value;
+    const email = (form.querySelector('[name="email"]') as HTMLInputElement)
+      .value;
+    const password = (
+      form.querySelector('[name="password"]') as HTMLInputElement
+    ).value;
 
     try {
       const { data, error } = await this.authService.signIn(email, password);

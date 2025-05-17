@@ -1,0 +1,39 @@
+:host {
+  display: grid;
+  grid-template-areas: "header header" "image image" "details address" "table table" "ideas ideas";
+  gap: var(--spacing-2x);
+}
+
+span {
+  color: var(--text-color-accent);
+}
+
+address {
+  grid-area: address;
+}
+
+p {
+  grid-area: details;
+}
+
+img {
+  grid-area: image;
+  width: 100%;
+  aspect-ratio: 2/1;
+  background-color: var(--color-accent);
+}
+
+table {
+  grid-area: table;
+  th {
+    text-align: left;
+  }
+
+  td {
+    text-align: right;
+  }
+}
+
+article {
+  grid-area: ideas;
+}

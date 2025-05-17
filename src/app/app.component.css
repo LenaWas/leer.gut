@@ -21,7 +21,7 @@ header {
     border-radius: 999px;
   }
 
-  & button {
+  & a {
     color: var(--text-color);
   }
 }
