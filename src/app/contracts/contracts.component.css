@@ -58,6 +58,12 @@ ol {
 
       & button {
         color: var(--text-color-accent);
+
+        & img {
+          object-fit: contain;
+          width: var(--spacing-2x);
+          aspect-ratio: 1/1;
+        }
       }
     }
   }

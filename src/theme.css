@@ -10,7 +10,7 @@
   --border-color-accent: var(--color-accent);
 
   --color-positive: var(--color-accent);
-  --color-on-positive: black;
+  --color-on-positive: var(--text-color);
   --color-information: blue;
   --color-on-information: white;
   --color-critical: orange;

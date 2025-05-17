@@ -7,15 +7,13 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: max-content max-content 1fr max-content;
   gap: var(--spacing-1x) var(--spacing-05x);
-}
 
-img {
-  grid-area: image;
-  width: 25vw;
-  justify-self: center;
-  aspect-ratio: 1/1;
-  background-color: var(--color-accent);
-  border-radius: 999px;
+  & > img {
+    grid-area: image;
+    width: 25vw;
+    justify-self: center;
+    aspect-ratio: 1/1;
+  }
 }
 
 h1 {
@@ -53,6 +51,12 @@ form {
     align-items: center;
     gap: var(--spacing-1x);
     color: var(--text-color-accent);
+
+    & img {
+      object-fit: contain;
+      width: var(--spacing-2x);
+      aspect-ratio: 1/1;
+    }
   }
 }
 

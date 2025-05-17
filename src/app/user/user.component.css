@@ -2,6 +2,15 @@
   display: grid;
   grid-template-areas: "image" "user" "nav";
   gap: var(--spacing-2x);
+
+  & > img {
+    grid-area: image;
+    width: 25vw;
+    aspect-ratio: 1/1;
+    background-color: var(--color-accent);
+    justify-self: center;
+    border-radius: 999px;
+  }
 }
 
 hgroup {
@@ -17,6 +26,12 @@ hgroup {
     & a {
       font-size: inherit;
       color: var(--text-color-accent);
+
+      & img {
+        object-fit: contain;
+        width: var(--spacing-1x);
+        aspect-ratio: 1/1;
+      }
     }
   }
 
@@ -36,15 +51,6 @@ hgroup {
       }
     }
   }
-}
-
-img {
-  grid-area: image;
-  width: 25vw;
-  aspect-ratio: 1/1;
-  background-color: var(--color-accent);
-  justify-self: center;
-  border-radius: 999px;
 }
 
 nav {

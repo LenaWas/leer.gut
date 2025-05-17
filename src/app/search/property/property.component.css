@@ -4,6 +4,10 @@
   gap: var(--spacing-2x);
 }
 
+hgroup {
+  grid-area: header;
+}
+
 span {
   color: var(--text-color-accent);
 }
@@ -21,6 +25,7 @@ img {
   width: 100%;
   aspect-ratio: 2/1;
   background-color: var(--color-accent);
+  object-fit: fill;
 }
 
 table {

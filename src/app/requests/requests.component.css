@@ -50,5 +50,11 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    & img {
+      object-fit: contain;
+      width: var(--spacing-2x);
+      aspect-ratio: 1/1;
+    }
   }
 }
