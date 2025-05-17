@@ -21,7 +21,6 @@ header {
   padding: var(--spacing-1x);
 
   & img {
-    background-color: var(--color-primary-alt);
     width: 10vw;
     aspect-ratio: 1/1;
     border-radius: 999px;
@@ -29,6 +28,10 @@ header {
 
   & a {
     color: var(--text-color);
+
+    & img {
+      width: var(--font-size-l);
+    }
   }
 }
 
