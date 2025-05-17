@@ -48,6 +48,13 @@ a {
       content: "Communityvorschläge";
       color: var(--text-color-accent);
     }
+
+    & li img {
+      object-fit: contain;
+      width: var(--font-size-s);
+      aspect-ratio: 1/1;
+      transform: translatey(10%);
+    }
   }
 
   & p {
